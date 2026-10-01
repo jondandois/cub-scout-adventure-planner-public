@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cub Scout Adventure Planner</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <header class="site-header">
+      <p class="eyebrow">Unofficial</p>
+      <h1>Cub Scout Adventure Planner</h1>
+      <p class="subtitle">Find Adventures that fit what your Pack is doing.</p>
+    </header>
+
+    <section class="search-panel" aria-labelledby="search-heading">
+      <h2 id="search-heading">What are you doing?</h2>
+
+      <form id="search-form">
+        <div class="search-row">
+          <label class="search-label" for="search-term">Search Adventures</label>
+          <div class="search-controls">
+            <input
+              id="search-term"
+              name="term"
+              type="search"
+              placeholder="nature, hike, animals, map..."
+              autocomplete="off"
+              spellcheck="false"
+            >
+            <button type="submit">Search</button>
+          </div>
+        </div>
+
+        <fieldset class="rank-filter">
+          <legend>Ranks</legend>
+
+          <div class="rank-options">
+            <label>
+              <input type="radio" name="rank" value="all" checked>
+              All
+            </label>
+
+            <label>
+              <input type="radio" name="rank" value="lion">
+              Lion
+            </label>
+
+            <label>
+              <input type="radio" name="rank" value="tiger">
+              Tiger
+            </label>
+
+            <label>
+              <input type="radio" name="rank" value="wolf">
+              Wolf
+            </label>
+
+            <label>
+              <input type="radio" name="rank" value="bear">
+              Bear
+            </label>
+
+            <label>
+              <input type="radio" name="rank" value="webelos">
+              Webelos
+            </label>
+
+            <label>
+              <input type="radio" name="rank" value="arrow-of-light">
+              Arrow of Light
+            </label>
+          </div>
+        </fieldset>
+      </form>
+    </section>
+
+    <section id="status" class="status" aria-live="polite"></section>
+    <section id="results" class="results" aria-live="polite"></section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

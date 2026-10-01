@@ -1,0 +1,285 @@
+:root {
+  --page-width: 1100px;
+  --border: #d7dbe0;
+  --muted: #5f6872;
+  --heading: #18212b;
+  --surface: #ffffff;
+  --link: #1558a6;
+  --button: #1f5f9f;
+  --button-hover: #174a7d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f0f2f4;
+  color: var(--heading);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+}
+
+.page {
+  width: min(calc(100% - 32px), var(--page-width));
+  margin: 0 auto;
+  padding: 48px 0 64px;
+}
+
+.site-header {
+  margin-bottom: 32px;
+}
+
+.eyebrow {
+  margin: 0 0 4px;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.subtitle {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.search-panel {
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.search-panel h2 {
+  margin: 0 0 18px;
+  font-size: 1.35rem;
+}
+
+.search-label,
+.rank-filter legend {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.search-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.search-controls input {
+  min-width: 0;
+  flex: 1;
+  padding: 11px 13px;
+  border: 1px solid #aeb5bd;
+  border-radius: 7px;
+  background: white;
+  color: inherit;
+  font: inherit;
+}
+
+.search-controls input:focus-visible {
+  outline: 2px solid #78a9d9;
+  outline-offset: 1px;
+}
+
+button {
+  padding: 11px 20px;
+  border: 0;
+  border-radius: 7px;
+  background: var(--button);
+  color: white;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--button-hover);
+}
+
+.rank-filter {
+  margin: 22px 0 0;
+  padding: 0;
+  border: 0;
+}
+
+.rank-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+}
+
+.rank-options label {
+  color: #303942;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.rank-options input {
+  margin-right: 5px;
+}
+
+.status {
+  min-height: 28px;
+  margin: 28px 2px 12px;
+  color: var(--muted);
+}
+
+.results {
+  display: grid;
+  gap: 28px;
+}
+
+.rank-section h2 {
+  margin: 0 0 10px;
+  font-size: 1.45rem;
+}
+
+.rank-count {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.adventure-list {
+  display: grid;
+  gap: 12px;
+}
+
+.adventure-card {
+  padding: 18px 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+}
+
+.adventure-card h3 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.adventure-meta {
+  margin: 4px 0 12px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.adventure-link {
+  color: var(--link);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.adventure-link:hover {
+  text-decoration: underline;
+}
+
+.match-list {
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.match-list li {
+  margin-top: 5px;
+  color: #3d4650;
+}
+
+.match-label {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.empty {
+  padding: 28px;
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  border-radius: 9px;
+  color: var(--muted);
+}
+
+.error {
+  color: #9a2e2e;
+}
+
+@media (max-width: 640px) {
+  .page {
+    width: min(calc(100% - 20px), var(--page-width));
+    padding-top: 28px;
+  }
+
+  .search-panel {
+    padding: 18px;
+  }
+
+  .search-controls {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+.matching-requirements {
+  margin-top: 18px;
+}
+
+.matching-requirement {
+  margin-top: 18px;
+}
+
+.matching-requirement:first-child {
+  margin-top: 0;
+}
+
+.requirement-title {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 6px;
+  color: #303942;
+  line-height: 1.45;
+}
+
+.requirement-title strong {
+  white-space: nowrap;
+  color: #202832;
+}
+
+.matching-activities {
+  margin: 7px 0 0 20px;
+  padding-left: 14px;
+  border-left: 2px solid #e1e4e8;
+}
+
+.matching-activity {
+  margin-top: 5px;
+  color: #4b5560;
+}
+
+.activity-label {
+  margin-right: 6px;
+  color: #68727d;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.activity-title {
+  color: #303942;
+}
