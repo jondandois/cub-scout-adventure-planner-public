@@ -1,4 +1,4 @@
-const DATA_URL = "../data/adventures.json";
+const DATA_URL = "data/adventures.json";
 
 let adventureData = null;
 
